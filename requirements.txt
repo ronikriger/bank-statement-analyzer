@@ -1,2 +1,2 @@
-pandas
-camelot-py
+pdfplumber
+openai

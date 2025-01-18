@@ -1,120 +1,64 @@
-import re
-import pandas as pd
-from datetime import datetime
+import openai
+import os
 
-def clean_and_format_data(df):
-    """
-    Cleans raw extracted data, identifies columns,
-    and normalizes date/amounts. Returns a standardized DataFrame.
-    """
-    # Use first row as header
-    header = df.iloc[0].values.tolist()
-    df.columns = header
-    df = df.iloc[1:].reset_index(drop=True)
-    
-    # Detect which columns are date, description, debit, credit, balance
-    date_col, desc_col, debit_col, credit_col, balance_col = detect_columns(df)
-    
-    # If single "Amount" column, create separate debit/credit columns
-    if 'Amount' in df.columns:
-        if not debit_col:
-            debit_col = 'debit'
-            df[debit_col] = 0.0
-        if not credit_col:
-            credit_col = 'credit'
-            df[credit_col] = 0.0
-        
-        for i in range(len(df)):
-            val_str = df.loc[i, 'Amount']
-            val = parse_amount(val_str)
-            if val < 0:
-                df.at[i, debit_col] = abs(val)
-                df.at[i, credit_col] = 0.0
-            else:
-                df.at[i, credit_col] = val
-                df.at[i, debit_col] = 0.0
-    
-    # Convert date strings to datetime
-    if date_col and date_col in df.columns:
-        df[date_col] = df[date_col].apply(lambda x: parse_date(str(x)))
-    
-    # Convert debit/credit/balance to numeric
-    if debit_col and debit_col in df.columns:
-        df[debit_col] = df[debit_col].apply(lambda x: parse_amount(str(x)))
-    if credit_col and credit_col in df.columns:
-        df[credit_col] = df[credit_col].apply(lambda x: parse_amount(str(x)))
-    if balance_col and balance_col in df.columns:
-        df[balance_col] = df[balance_col].apply(lambda x: parse_amount(str(x)))
-    
-    # Drop invalid rows
-    if date_col in df.columns:
-        df.dropna(subset=[date_col], inplace=True)
-    
-    # Rename to a standard schema
-    df = df.rename(columns={
-        date_col: 'date',
-        desc_col: 'description',
-        debit_col: 'debit',
-        credit_col: 'credit',
-        balance_col: 'balance'
-    })
-    
-    # Reorder
-    cols = [c for c in ['date', 'description', 'debit', 'credit', 'balance'] if c in df.columns]
-    df = df[cols].reset_index(drop=True)
-    
-    return df
+# Set your OpenAI API key
+openai.api_key = "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"
 
-def detect_columns(df):
+def analyze_with_chatgpt(text_files):
     """
-    Attempts to detect columns for date, description, debit, credit, balance.
-    """
-    date_col = None
-    desc_col = None
-    debit_col = None
-    credit_col = None
-    balance_col = None
-    
-    for col in df.columns:
-        lc = col.lower()
-        if 'date' in lc:
-            date_col = col
-        elif 'desc' in lc or 'narration' in lc:
-            desc_col = col
-        elif 'debit' in lc:
-            debit_col = col
-        elif 'credit' in lc:
-            credit_col = col
-        elif 'bal' in lc:
-            balance_col = col
-        elif 'amount' in lc:
-            # We'll handle single amount column separately
-            pass
-    
-    return date_col, desc_col, debit_col, credit_col, balance_col
+    Sends extracted text files to ChatGPT for analysis.
 
-def parse_date(date_str):
+    Args:
+        text_files (list): List of paths to text files.
+
+    Returns:
+        list: List of analysis results from ChatGPT.
     """
-    Attempts to parse various date formats to a datetime object.
-    """
-    for fmt in ('%d/%m/%Y', '%m/%d/%Y', '%Y-%m-%d', '%d-%m-%Y', '%d.%m.%Y'):
+    insights = []
+
+    for file_path in text_files:
+        with open(file_path, "r", encoding="utf-8") as f:
+            text = f.read()
+
         try:
-            return datetime.strptime(date_str, fmt)
-        except ValueError:
-            pass
-    return None
+            # Send the text to ChatGPT using the updated API
+            response = openai.ChatCompletion.create(
+                model="gpt-4",
+                messages=[
+                    {"role": "system", "content": "You are a financial analyst."},
+                    {"role": "user", "content": f"Analyze the following bank statement data:\n{text}"}
+                ]
+            )
 
-def parse_amount(amount_str):
-    """
-    Parse a currency string into a float, removing commas,
-    parentheses, and other symbols.
-    """
-    if not amount_str or amount_str.strip() == '':
-        return 0.0
-    clean_str = re.sub(r'[^0-9.\-()]', '', amount_str)
-    if '(' in clean_str and ')' in clean_str:
-        clean_str = '-' + clean_str.replace('(', '').replace(')', '')
+            # Access the first response choice
+            insight = response['choices'][0]['message']['content']
+            insights.append(insight)
+            print(f"Analysis for {file_path} complete.")
+
+        except Exception as e:
+            print(f"Error analyzing {file_path}: {e}")
+            insights.append(f"Error analyzing {file_path}: {e}")
+
+    return insights
+
+if __name__ == "__main__":
+    # Example usage
+    output_dir = "extracted_texts"
+    if not os.path.exists(output_dir):
+        print(f"Error: The directory '{output_dir}' does not exist.")
+        exit(1)
+
+    text_files = [os.path.join(output_dir, file) for file in os.listdir(output_dir) if file.endswith(".txt")]
+
+    if not text_files:
+        print(f"Error: No .txt files found in '{output_dir}' for analysis.")
+        exit(1)
+
     try:
-        return float(clean_str)
-    except ValueError:
-        return 0.0
+        print("Analyzing extracted text files with ChatGPT...")
+        results = analyze_with_chatgpt(text_files)
+        for result in results:
+            print("\n--- ChatGPT Analysis ---")
+            print(result)
+    except Exception as e:
+        print(f"An error occurred during analysis: {e}")
