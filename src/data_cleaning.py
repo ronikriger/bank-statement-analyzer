@@ -2,7 +2,7 @@ import openai
 import os
 
 # Set your OpenAI API key
-openai.api_key = "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"
+openai.api_key = "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"
 
 def analyze_with_chatgpt(text_files):
     """
@@ -23,7 +23,7 @@ def analyze_with_chatgpt(text_files):
         try:
             # Send the text to ChatGPT using the updated API
             response = openai.ChatCompletion.create(
-                model="gpt-4",
+                model="gpt-3.5-turbo",
                 messages=[
                     {"role": "system", "content": "You are a financial analyst."},
                     {"role": "user", "content": f"Analyze the following bank statement data:\n{text}"}
