@@ -1,14 +1,2 @@
-# OS files
 .DS_Store
-
-# Byte-compiled / optimized / DLL files
 __pycache__/
-*.py[cod]
-*.so
-
-# Virtual environment
-venv/
-env/
-
-# Any local PDF test data if you want to exclude it
-test_pdfs/*.pdf
