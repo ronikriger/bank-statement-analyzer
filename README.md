@@ -71,28 +71,28 @@ Make sure that requirements.txt includes all necessary packages (see Dependencie
 - Name them appropriately (e.g., `BankStatement1.pdf`, `BankStatement2.pdf`, etc.).
 
 #### Run the Pipeline
+    ```bash
+    python pdf_pipeline.py
 
-```bash
-python pdf_pipeline.py
 
-What Happens:
+#### What Happens:
 
-Text Extraction:
-The pipeline extracts text from each PDF, saving individual pages as .txt files in the extracted_texts/ directory.
+- Text Extraction:
+- The pipeline extracts text from each PDF, saving individual pages as .txt files in the extracted_texts/ directory.
 
-ChatGPT Analysis:
-Each extracted text file is processed by ChatGPT to generate narrative insights.
+#### ChatGPT Analysis:
+- Each extracted text file is processed by ChatGPT to generate narrative insights.
 
-ML Transaction Analysis:
-All text files are consolidated; transactions are parsed, categorized, and anomalies are detected.
+#### ML Transaction Analysis:
+- All text files are consolidated; transactions are parsed, categorized, and anomalies are detected.
 
-Time Series Forecasting:
-Historical cash flows are aggregated on a daily basis, and an Exponential Smoothing model forecasts future cash flows (e.g., for the next 30 days).
-The forecasted results are printed, and a forecast plot is saved in the extracted_texts/ directory.
+#### Time Series Forecasting:
+- Historical cash flows are aggregated on a daily basis, and an Exponential Smoothing model forecasts future cash flows (e.g., for the next 30 days).
+- The forecasted results are printed, and a forecast plot is saved in the extracted_texts/ directory.
 
-Launching the Dashboard
-Ensure Streamlit and Plotly Are Installed
-If you haven't yet installed these packages, run:
+#### Launching the Dashboard:
+- Ensure Streamlit and Plotly Are Installed
+- If you haven't yet installed these packages, run:
 
     ```bash
     pip install streamlit plotly
@@ -100,32 +100,16 @@ If you haven't yet installed these packages, run:
       ```bash
     streamlit run dashboard.py
 
-Dashboard Features:
+#### Dashboard Features:
 
-Filters:
-Choose transaction categories, set date ranges, and filter anomalies.
+## Filters:
+- Choose transaction categories, set date ranges, and filter anomalies.
 
-Visualizations:
+## Visualizations:
 
-A scatter plot displays transaction amounts over time (with anomaly markers).
-A bar chart summarizes transactions per category.
-Summary:
-Key metrics such as total transactions and detected anomalies are displayed.
-
-Forecast Display:
-If integrated, the dashboard may also include forecast visualizations and outputs.
-
-bankstatements/: Input directory for PDF bank statements.
-extracted_texts/: Output directory where PDF text extraction occurs.
-src/: Contains source modules:
-extract_bank_data.py: Extracts text from PDFs.
-data_cleaning.py: Performs ChatGPT analysis.
-transaction_analysis.py: Parses and analyzes transactions.
-forecasting.py: Implements time series forecasting.
-dashboard.py: Interactive dashboard using Streamlit.
-pdf_pipeline.py: Main pipeline script orchestrating extraction, analysis, and forecasting.
-requirements.txt: Lists project dependencies.
-README.md: Project documentation.
+- A scatter plot displays transaction amounts over time (with anomaly markers).
+- A bar chart summarizes transactions per category.
+- Key metrics such as total transactions and detected anomalies are displayed.
 
 PLEASEE Install dependencies!!!! 
         pip install -r requirements.txt
