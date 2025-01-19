@@ -112,5 +112,6 @@ Make sure that requirements.txt includes all necessary packages (see Dependencie
 - Key metrics such as total transactions and detected anomalies are displayed.
 
 PLEASEE Install dependencies!!!! 
+        ```bash
         pip install -r requirements.txt
 
