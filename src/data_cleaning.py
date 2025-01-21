@@ -1,8 +1,12 @@
 import openai
 import os
+from dotenv import load_dotenv
 
-# Set your OpenAI API key
-openai.api_key = "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"
+load_dotenv(dotenv_path="/Users/ronikriger/Desktop/bank-statement-analyzer/.env")
+
+openai_api_key = os.getenv("OPENAI_API_KEY")
+openai.api_key = openai_api_key
+
 
 def analyze_with_chatgpt(text_files):
     """

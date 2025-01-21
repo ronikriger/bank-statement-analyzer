@@ -1,55 +1,62 @@
-Your Statement
-Statement 29 (Page 1 of 3)
-Account Number 06 6104 10252276
-050
-Statement
-Period 14 Oct 2017 - 13 Jan 2018
-MR C H BENNISON
-19 ORONSAY RD
-Closing Balance $395.43 CR
-GREENWOOD WA 6024
-Enquiries 13 2221
-(24 hours a day, 7 days a week)
-Smart Access
-Enjoy the convenience and security of withdrawing what you need, when you need it. Plus you can have your
-monthly account fee waived if you deposit at least $2,000 each calendar month.
-Name: CLIFFORD HENRY BENNISON
-Note: Have you checked your statement today? It's easy to find out more information about each of your
-transactions by logging on to the CommBank App or NetBank. Should you have any questions on
-fees or see an error please contact us on the details above. Cheque proceeds are available when
-cleared.
-Date Transaction Debit Credit Balance
-14 Oct 2017 OPENING BALANCE $2,217.29 CR
-15 Oct Alinta Sales Pty Ltd NetBank BPAY 2733
-0400032246 50.00 $2,167.29 CR
-23 Oct VIRGIN MONEY NetBank BPAY 49551
-4724373501635385 1,000.00 $1,167.29 CR
-23 Oct Transfer to xx6832 NetBank 70.00 $1,097.29 CR
-23 Oct Direct Debit 180247 SGIO
-MOT563142623171021 56.42 $1,040.87 CR
-26 Oct Direct Debit 165969 JETTS KINGSWAY
-201724473788 27.90 $1,012.97 CR
-01 Nov Account Fee 4.00 $1,008.97 CR
-01 Nov Direct Credit 421520 JESSICA LAING
-JL - Internet 40.00 $1,048.97 CR
-01 Nov Transfer from xx8727 CommBank app 1,000.00 $2,048.97 CR
-01 Nov Direct Debit 000702 HBF - HEALTH
-1439123504 122.25 $1,926.72 CR
-05 Nov Transfer to other Bank NetBank
-Oronsay 700.00 $1,226.72 CR
-07 Nov TELSTRA CORP LTD NetBank BPAY 23796
-2000353972134 115.00 $1,111.72 CR
-09 Nov Direct Debit 165969 JETTS KINGSWAY
-201725516901 27.90 $1,083.82 CR
-21 Nov Direct Debit 180247 SGIO
-MOT563142623171121 56.42 $1,027.40 CR
-22 Nov Direct Debit 068093 SYNERGY RETAIL B
-257300733078 190.70 $836.70 CR
-23 Nov Direct Debit 165969 JETTS KINGSWAY
-201726554790 27.90 $808.80 CR
-42.00.60V
-O.510D.119S.3R.LS
-3030
-3R852ZZ
-2.1.79191.1318
-*#*
+Business Statement
+Account Number:
+1 455 7029 8821
+P.O. Box 1800
+Saint Paul, Minnesota 55101-0800 Statement Period:
+9169 IMG S Y ST01 Oct 2, 2017
+through
+Oct 31, 2017
+Page 1 of 8
+000007622 02 SP 106481289740840 S
+BETHLEHEM HOME HEALTH CARE AGENCY To Contact U.S. Bank
+2726 FOREST AVE
+24-Hour Business
+KANSAS CITY MO 64109-1224
+Solutions: 1-800-673-3555
+U.S. Bank accepts Relay Calls
+Internet: usbank.com
+INFORMATION YOU SHOULD KNOW
+Effective November 13, 2017, the "Your Deposit Account Agreement" booklet includes a number of updates and may affect
+your rights. As of Nov. 13, 2017 you may pick up copies at your local branch or view copies at usbank.com, or call 1-800-
+USBANKS (1-800-872-2657) for a copy. Please see the Additional Information Section of this statement for the main updates that
+were made to "Your Deposit Account Agreement" booklet.
+SILVER BUSINESS CHECKING Member FDIC
+U.S. Bank National Association Account Number 1-455-7029-8821
+Account Summary
+# Items
+Beginning Balance on Oct 2 $ 10,487.68
+Other Deposits 17 87,684.11
+Card Withdrawals 5 586.27 -
+Other Withdrawals 10 47,024.45 -
+Checks Paid 29 30,416.69 -
+Ending Balance on Oct 31, 2017 $ 20,144.38
+Other Deposits
+Date Description of Transaction Ref Number Amount
+Oct 2 Electronic Deposit From 36 TREAS 310 $ 7,265.00
+REF=172750102657000N00 9101036151 MISC PAY431833386360012
+Oct 3 Electronic Deposit From 36 TREAS 310 6,400.00
+REF=172760027363140N00 9101036151 MISC PAY431833386360012
+Oct 4 Electronic Deposit From CGS ADMINISTATOR 11,911.98
+REF=172720058223180Y00 6202552297HCCLAIMPMT267605
+Oct 11 Electronic Deposit From CGS ADMINISTATOR 4,972.84
+REF=172780042278970Y00 6202552297HCCLAIMPMT267605
+Oct 12 Electronic Deposit From 36 TREAS 310 4,510.00
+REF=172850024413210N00 9101036151 MISC PAY431833386360012
+Oct 12 Electronic Deposit From CGS ADMINISTATOR 5,597.43
+REF=172790122999750Y00 6202552297HCCLAIMPMT267605
+Oct 16 Electronic Deposit From 36 TREAS 310 2,641.08
+REF=172890066691320N00 9101036151 MISC PAY431833386360012
+Oct 17 Electronic Deposit From CGS ADMINISTATOR 3,036.78
+REF=172850047281610Y00 6202552297HCCLAIMPMT267605
+Oct 20 Electronic Deposit From 36 TREAS 310 760.00
+REF=172920112272070N00 9101036151 MISC PAY431833386360012
+Oct 20 Electronic Deposit From CGS ADMINISTATOR 11,414.48
+REF=172900111651190Y00 6202552297HCCLAIMPMT267605
+Oct 23 Electronic Deposit From 36 TREAS 310 3,150.00
+REF=172960092179570N00 9101036151 MISC PAY431833386360012
+Oct 24 Electronic Deposit From CGS ADMINISTATOR 305.71
+REF=172920071406510Y00 6202552297HCCLAIMPMT267605
+Oct 24 Electronic Deposit From 36 TREAS 310 660.00
+REF=172960187647050N00 9101036151 MISC PAY431833386360012
+Oct 25 Electronic Deposit From CGS ADMINISTATOR 11,572.01
+REF=172930041655740Y00 6202552297HCCLAIMPMT267605
