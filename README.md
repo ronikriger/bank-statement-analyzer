@@ -32,7 +32,8 @@
 
 ## Demo
 
-![Dashboard Screenshot](https://your-repo-url/dashboard_screenshot.png)
+<img width="1440" alt="Screenshot 2025-01-21 at 04 06 51" src="https://github.com/user-attachments/assets/c9689189-1fd4-4ab6-8561-23a55c4da9bc" />
+
 
 ## Installation
 
@@ -73,6 +74,7 @@ Make sure that requirements.txt includes all necessary packages (see Dependencie
 #### Run the Pipeline
     ```bash
     python pdf_pipeline.py
+![image](https://github.com/user-attachments/assets/8c3c13e5-1554-4067-8e0c-4f6f8926c077)
 
 
 
